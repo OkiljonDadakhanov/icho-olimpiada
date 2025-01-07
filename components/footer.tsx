@@ -7,9 +7,10 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">About</h3>
             <p className="text-sm">
-              This SPA is designed to provide seamless scheduling and location
-              management for various events. With detailed programs and
-              locations, we aim to enhance event accessibility and organization.
+              The 58th IChO International Chemistry Olympiad will take place in
+              Tashkent, Uzbekistan from 10-20 July 2026. It will bring together
+              young chemists from around the globe to compete in chemistry
+              challenges, fostering scientific collaboration and learning.
             </p>
           </div>
 
