@@ -4,6 +4,7 @@ import { Schedule } from "@/components/schedule";
 import { Locations } from "@/components/locations";
 import { CulturalProgram } from "@/components/cultural-program";
 import { Organizers } from "@/components/organizers";
+import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Schedule />
       <Locations />
       <CulturalProgram />
+      <Footer />
     </main>
   );
 }
