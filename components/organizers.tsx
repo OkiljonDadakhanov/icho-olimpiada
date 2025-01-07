@@ -17,8 +17,8 @@ export function Organizers() {
           <h3 className="text-xl font-semibold mb-4">Supporting Partners</h3>
           <p className="mb-6">
             The Ministry of Higher Education, Science and Innovation, The Agency
-            of Specialized Educational Institutions and "Uz Chemistry Industry"
-            companies.
+            of Specialized Educational Institutions and &quot;Uz Chemistry
+            Industry&quot; companies.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
