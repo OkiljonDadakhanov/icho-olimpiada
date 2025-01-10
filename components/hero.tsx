@@ -2,19 +2,19 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="pt-32 pb-20 px-4">
+    <section className="pt-32 pb-20 px-4 min-h-[800px]">
       <div className="container mx-auto max-w-6xl">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center mt-[80px]">
           <div>
             <h1 className="text-4xl md:text-6xl font-bold text-navy-900 mb-6">
               58th IChO International Chemistry Olympiad
             </h1>
             <div className="flex items-center gap-4 mb-6">
               <Image
-                src="/placeholder.svg"
+                src="/images/flag.jpg"
                 alt="Uzbekistan Flag"
-                width={60}
-                height={40}
+                width={80}
+                height={60}
                 className="rounded"
               />
               <div>
@@ -27,11 +27,11 @@ export function Hero() {
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl">
               <div className="absolute inset-0 flex items-center justify-center">
                 <Image
-                  src="/placeholder.svg"
+                  src="/images/main.jpg"
                   alt="Chemistry Molecule"
-                  width={200}
-                  height={200}
-                  className="opacity-80"
+                  className="opacity-80 rounded"
+                  fill
+                  priority
                 />
               </div>
             </div>

@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-10 px-4">
+    <footer className="bg-gray-800 text-white py-10 px-4" id="contact">
       <div className="container mx-auto max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* About Section */}
@@ -24,7 +24,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#locations" className="hover:underline">
+                <a href="#venues" className="hover:underline">
                   Event Locations
                 </a>
               </li>
@@ -43,10 +43,10 @@ export function Footer() {
               <span className="block mb-2">
                 Email:{" "}
                 <a
-                  href="mailto:info@example.com"
+                  href="mailto:info@olympcenter.uz"
                   className="text-blue-400 hover:underline"
                 >
-                  info@example.com
+                  info@olympcenter.uz
                 </a>
               </span>
               <span className="block mb-2">
@@ -56,7 +56,7 @@ export function Footer() {
                 </a>
               </span>
               <span className="block">
-                Address: New Uzbekistan University, Tashkent, Uzbekistan
+                Address: Science Olympiad Center, Tashkent, Uzbekistan
               </span>
             </p>
           </div>

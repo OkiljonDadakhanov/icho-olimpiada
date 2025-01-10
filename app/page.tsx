@@ -1,10 +1,14 @@
+import "./globals.css";
 import { Navigation } from "@/components/navigation";
 import { Hero } from "@/components/hero";
 import { Schedule } from "@/components/schedule";
-import { Locations } from "@/components/locations";
-import { CulturalProgram } from "@/components/cultural-program";
-import { Organizers } from "@/components/organizers";
+// import { Locations } from "@/components/locations";
+// import { CulturalProgram } from "@/components/cultural-program";
+import { Organizers } from "@/components/main-organizers";
 import { Footer } from "@/components/footer";
+import SwiperOrganizers from "@/components/ui/location-swiper";
+import { ScientificCommittee } from "@/components/scientific-committee";
+import Sponsors from "@/components/sponsors";
 
 export default function Home() {
   return (
@@ -12,9 +16,15 @@ export default function Home() {
       <Navigation />
       <Hero />
       <Organizers />
+
       <Schedule />
-      <Locations />
-      <CulturalProgram />
+      <ScientificCommittee />
+
+      <Sponsors />
+
+      {/* <Locations /> */}
+      <SwiperOrganizers />
+      {/* <CulturalProgram /> */}
       <Footer />
     </main>
   );

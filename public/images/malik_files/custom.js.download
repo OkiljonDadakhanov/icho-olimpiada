@@ -1,0 +1,100 @@
+var prev_nav = null;
+var cur_nav = null;
+elements = document.getElementsByClassName('nav__link');
+document.body.addEventListener('click', function(e) {
+    if(prev_nav){
+        var dropdownItem = prev_nav.parentNode;
+        var dropdownMenu = prev_nav.nextElementSibling;
+        var dropdownArrow = dropdownItem.querySelector('.dropdown__arrow');
+        dropdownMenu.classList.toggle('dropdown__itemTarget');
+        dropdownMenu.classList.toggle('dropdown__menuOpacity');
+        dropdownArrow.classList.remove('dropdown__arrowTarget');
+        dropdownArrow.classList.add('dropdown__arrowTargetNone');
+        prev_nav=null;
+    }
+    else{
+        if(!e.target.classList.contains('nav__link') && !e.target.parentNode.classList.contains('nav__link')){
+            if(prev_nav){
+                var dropdownItem = prev_nav.parentNode;
+                var dropdownMenu = prev_nav.nextElementSibling;
+                var dropdownArrow = dropdownItem.querySelector('.dropdown__arrow');
+                dropdownMenu.classList.toggle('dropdown__itemTarget');
+                dropdownMenu.classList.toggle('dropdown__menuOpacity');
+                dropdownArrow.classList.remove('dropdown__arrowTarget');
+                dropdownArrow.classList.add('dropdown__arrowTargetNone');
+            }
+            if(cur_nav){
+                var dropdownItem = cur_nav.parentNode;
+                var dropdownMenu = cur_nav.nextElementSibling;
+                var dropdownArrow = dropdownItem.querySelector('.dropdown__arrow');
+                dropdownMenu.classList.toggle('dropdown__itemTarget');
+                dropdownMenu.classList.toggle('dropdown__menuOpacity');
+                dropdownArrow.classList.remove('dropdown__arrowTarget');
+                dropdownArrow.classList.add('dropdown__arrowTargetNone');
+            }
+            prev_nav=null;
+            cur_nav=null;
+        }
+    }
+});
+function navLinkDropdown(event) {
+    var dropdownItem = event.parentNode;
+    var dropdownMenu = event.nextElementSibling;
+    var dropdownArrow = dropdownItem.querySelector('.dropdown__arrow');
+    dropdownMenu.classList.toggle('dropdown__itemTarget');
+    dropdownMenu.classList.toggle('dropdown__menuOpacity');
+    prev_nav=cur_nav;
+    cur_nav = event;
+    if (dropdownArrow.classList.contains('dropdown__arrowTarget')) {
+        dropdownArrow.classList.remove('dropdown__arrowTarget');
+        dropdownArrow.classList.add('dropdown__arrowTargetNone');
+        cur_nav=null;
+        prev_nav=null;
+    } else {
+        dropdownArrow.classList.remove('dropdown__arrowTargetNone');
+        dropdownArrow.classList.add('dropdown__arrowTarget');
+    }
+
+
+    // Scroll to the bottom of the dropdown menu
+    setTimeout(function() {
+        var elem = dropdownMenu.parentNode;
+        elem.scrollTop = elem.scrollHeight;
+    }, 200);
+}
+
+
+let resizeTimer;
+
+// Function to change the logo based on window width
+function changeNavLogo() {
+    let navLogo = document.querySelector('.nav-logo');
+
+    if (document.documentElement.clientWidth <= 1280) {
+        navLogo.src = "/static/media/newuu-logo2.png";
+    } else {
+        navLogo.src = "/static/media/newuu-logo.png";
+    }
+}
+
+// Function to debounce the resize event
+
+
+// Event listener for window resize
+window.addEventListener('resize', function() {
+    changeNavLogo()
+});
+changeNavLogo();
+
+/*=============== SHOW MENU ===============*/
+const showMenu = (toggleId, navId) => {
+    const toggle = document.getElementById(toggleId);
+    const nav = document.getElementById(navId);
+    toggle.addEventListener('click', () => {
+        nav.classList.toggle('show-menu');
+        toggle.classList.toggle('show-icon');
+    });
+};
+showMenu('nav_toggle', 'nav_menu');
+
+
