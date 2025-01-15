@@ -35,7 +35,6 @@ const eventLocations = [
     image: "/images/nuu1.JPG",
     alt: "National University of Uzbekistan",
   },
-
   {
     title: "Experimental Exam",
     description: `National University of Uzbekistan
@@ -43,14 +42,12 @@ const eventLocations = [
     image: "/images/nuu2.JPG",
     alt: "National University of Uzbekistan",
   },
-
   {
     title: "Theoretical Exam",
     description: "Zakovat Arena in Tashkent",
     image: "/images/zakovat1.webp",
     alt: "Zakovat Arena in Tashkent",
   },
-
   {
     title: "Theoretical Exam",
     description: "Zakovat Arena in Tashkent",
@@ -78,16 +75,34 @@ export default function SwiperOrganizers() {
     <div className="bg-gray-100 py-12">
       <h2 className="text-center text-2xl font-bold mb-8">Event Locations</h2>
       <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
+        slidesPerView={1}
+        spaceBetween={10}
         freeMode={true}
         loop={true}
         pagination={{
           clickable: true,
         }}
         autoplay={{
-          delay: 3000, // Delay between slides in milliseconds
-          disableOnInteraction: false, // Autoplay will not stop after user interaction
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        breakpoints={{
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 15,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
         }}
         modules={[FreeMode, Autoplay]}
         className="mySwiper px-4"
@@ -105,7 +120,7 @@ export default function SwiperOrganizers() {
                     alt={location.alt}
                     fill
                     className="object-cover"
-                    loading="lazy"
+                    priority
                   />
                 </div>
                 <p className="text-lg text-gray-600 min-h-[3.5rem]">
