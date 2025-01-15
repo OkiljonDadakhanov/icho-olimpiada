@@ -72,7 +72,7 @@ const eventLocations = [
 
 export default function SwiperOrganizers() {
   return (
-    <div className="bg-gray-100 py-12">
+    <div className="bg-gray-100 py-12" id="locations">
       <h2 className="text-center text-2xl font-bold mb-8">Event Locations</h2>
       <Swiper
         slidesPerView={1}

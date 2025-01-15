@@ -84,6 +84,30 @@ export function ScientificCommittee() {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 text-center">
           {[
             {
+              name: "Acad. Shamansur Sagdullaev",
+              title:
+                "Director of Institute of Plan Chemistry. Committee member",
+              image: "/images/shamansur.jpg",
+            },
+            {
+              name: "Prof. Burkhon Elmuradov",
+              title:
+                "Deputy Director for Research and Innovation of Institute of Plant Chemistry, Committee member",
+              image: "/images/profile.png ",
+            },
+            {
+              name: "Prof. Khamid Khodjaniyazov",
+              title:
+                "Leading Researcher of Complex Compounds Lab., A.S. Sadykov Bioorganic Chemistry Institute, Committee member",
+              image: "/images/khamid.png",
+            },
+            {
+              name: "Prof. Abdujalol Sidikov",
+              title:
+                "Tashkent institute of chemical technologies, Committee member",
+              image: "/images/profile.png",
+            },
+            {
               name: "Bekzod Boltayev",
               title: "ICHO Gold Medalist – 2013, 2014, Committee member",
               image: "/images/bekzod.jpg",

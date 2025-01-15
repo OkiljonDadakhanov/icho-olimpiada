@@ -56,7 +56,8 @@ export function Footer() {
                 </a>
               </span>
               <span className="block">
-                Address: Science Olympiad Center, Tashkent, Uzbekistan
+                Address: Otchopar 1, Darvozakent street, Yunusobod district,
+                Tashkent, Uzbekistan
               </span>
             </p>
           </div>

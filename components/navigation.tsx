@@ -24,13 +24,12 @@ export function Navigation() {
               className="flex items-center text-navy-900 font-bold text-2xl"
             >
               <Image
-                src="/icons/logo.png" // Replace with the actual path to your logo
+                src="/images/main.png" // Replace with the actual path to your logo
                 alt="Logo"
                 width={100} // Adjust the width of the logo
                 height={100} // Adjust the height of the logo
-                className="mr-2" // Adds some spacing between the logo and the text
+                className="mr-2 ml-[28px]" // Adds some spacing between the logo and the text
               />
-              58th IChO
             </Link>
 
             {/* Hamburger Icon (Visible on Mobile) */}
@@ -62,7 +61,7 @@ export function Navigation() {
                     href="#committee"
                     className="block hover:bg-gray-700 hover:text-gray-300 transition-all duration-300"
                   >
-                    Committee
+                    Supervisory Committee
                   </Link>
                 </li>
 
@@ -116,7 +115,7 @@ export function Navigation() {
                 href="#committee"
                 className="text-navy-900 text-xl hover:text-navy-700 hover:bg-gray-200 px-3 py-2 rounded transition-all duration-300"
               >
-                Committee
+                Supervisory Committee
               </Link>
 
               <Link
